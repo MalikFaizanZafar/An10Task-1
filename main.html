@@ -2,52 +2,68 @@
 <html>
 <head>
   <title>Task # 1</title>
-  <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/jquery.datepicker.css">
 </head>
 <body id="body" onload="myMap()">
   <!---header Section --->
   <section id="header">
-    <h1><span>the</span> NUMB3RS</h1>
+      <h1><span id="the">the</span>NUMB3RS</h1>
   </section>
   <!--end header Section --->
 
 
   <!----Section 1--->
 
-  <section id="section1">
+  <section id="section1" class="section1">
     <div class="row">
-    <div class="col-md-4 offset-md-1">
-      <div class="card card1">
+      <!---card 1----->
+      <div class="col-md-4 offset-md-1">
+        <div class="card card1">
             <div class="card-image">
-              <img src="images/image-1.jpg">
+              <img src="images/image-2.png">
             </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-            </div>
-          </div>
-    </div>
-
-
-    <div class="col-md-4 offset-md-1">
-      <div class="card card2">
-            <div class="card-image">
-              <img src="images/image-1.jpg">
+            <div class="card-content" style="background-color:#2b414e; color:white;">
+              <div class="card-body">
+                <div class="row">
+                    <h5>AAPL</h5><small style="margin-left:55px;">Apple Inc.</small><h5>+21,07%</h5>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                    <h5>GOOG</h5><small>Apple Inc.</small><h5>+14,08%</h5>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                    <h5>YHOO</h5><small>Apple Inc.</small><h5>+0,65%</h5>
+                </div>
+              </div>
             </div>
         </div>
-        <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Card Title</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+      </div>
+
+    <!---card 2----->
+      <div class="col-md-4 offset-md-1">
+
+        <div class="card card2">
+          <div class="card-image">
+            <img src="images/image-3.png" style="height:500px;">
+          </div>
+        </div>
+
+
+
+
+        <div class="card blue-grey darken-1" style="margin-top:80px;">
+          <div class="card-image">
+            <img src="images/image-4.png">
+          </div>
             </div>
           </div>
-    </div>
+      </div>
     </div>
   </section>
   <!----end section 1 --->
@@ -74,17 +90,49 @@
     <div class="row">
     <div class="col-md-4 offset-md-1">
       <div class="card card1">
-            <div class="card-image">
-              <img src="images/image-1.jpg">
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
+        <div id="calculator">
+              <div class="result">
+                <p class="row"></p>
+                <strong class="row"></strong>
+              </div>
+            <div style="width: 100%;" class="keypad">
+              <div class="row1">
+                <span class="clear" style="background-color: #e0a652">C</span>
+                <span style="background-color: #ebaf59">+-</span>
+                <span style="background-color: #dfa856">%</span>
+                <span style="background-color: #de794b">+</span>
+              </div>
+
+              <div class="row2">
+                <span>7</span>
+                <span style="background-color: #dcdddf">8</span>
+                <span>9</span>
+                <span style="background-color: #d17043">-</span>
+              </div>
+
+              <div class="row3">
+                <span>4</span>
+                <span style="background-color: #dcdddf">5</span>
+                <span>6</span>
+                <span style="background-color: #e07b4d">*</span>
+              </div>
+
+              <div class="row4">
+                <span style="background-color: #dcdddf">1</span>
+                <span>2</span>
+                <span style="background-color: #dcdddf">3</span>
+                <span style="background-color: #e07b4d">/</span>
+              </div>
+
+              <div class="row5">
+                <span style="width:209px;">0</span>
+                <span style="background-color: #e07b4c">,</span>
+                <span style="background-color: #c86d41">=</span>
+              </div>
+
             </div>
           </div>
+      </div>
     </div>
 
 
@@ -109,7 +157,7 @@
 
   <!--section4---->
 
-  <section id="section4">
+  <section id="section4" >
     <div class="row">
         <div class="col-md-9 offset-md-1">
           <div id="map" style="width:983px;height:400px;"></div>
@@ -125,16 +173,7 @@
     <div class="row">
     <div class="col-md-4 offset-md-1">
       <div class="card card1">
-            <div class="card-image">
-              <img src="images/image-1.jpg">
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-            </div>
+        <div class="demo" id="calender"></div>
           </div>
     </div>
 
@@ -169,6 +208,9 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/locale/af.js"></script>
+  <script src="js/jquery.datepicker.js"></script>
+  <script src="js/main.js"></script>
   <script>
   function myMap() {
     var mapCanvas = document.getElementById("map");
