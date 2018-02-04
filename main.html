@@ -4,13 +4,14 @@
   <title>Task # 1</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/jquery.datepicker.css">
 </head>
 <body id="body" onload="myMap()">
   <!---header Section --->
   <section id="header">
-      <h1><span id="the">the</span>NUMB3RS</h1>
+      <h1><span>the</span>&nbsp;NUMB3RS</h1>
   </section>
   <!--end header Section --->
 
@@ -178,17 +179,48 @@
     </div>
 
 
-    <div class="col-md-4 offset-md-1">
-      <div class="card card2">
+    <div class="col-md-4 offset-md-1" >
+      <div class="card card2" style="background-color: #f6f6f6;">
         <div class="card-image">
-          <img src="images/image-1.jpg">
+          <div class="row">
+            <div class="col-md-6 offset-md-1">
+                <img src="images/image-5.png" class="rounded-circle card" style="height:200px; margin-top:20px;">
+            </div>
+            <div class="col-md-4">
+              <div id="tweets" class="row">
+                <span >TWEETS</span>
+                <span style="color : #e37949">13 460</span>
+              </div>
+              <div id="following" class="row">
+                <span>FOLLOWING</span>
+                <span style="color : #e37949">18</span>
+              </div>
+              <div id="followers" class="row">
+                <span>FOLLOWERS</span>
+                <span style="color : #e37949">98 120</span>
+              </div>
+            </div>
+          </div>
+          <div class="row card" id="profileName">
+              <h4 style="color : #e37949; margin-left: 20px;">Gorden Gekko<span>@GGEKO</span></h4>
+          </div>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+          <p style="font-size: 20px;">The point is, ladies and gentlemen, that greed -- for lack of a better word -- is GOOD. Greed is Right.
+           Greed Works</p>
+           <div class="row" id="yearago">
+             <a href="" style="color : #e37949;">Reply</a>
+             <a href="" style="color : #e37949; margin-left : 10px;">Retweet</a>
+             <a href="" style="color : #e37949; margin-left : 10px;">Favorite</a>
+             <span>27 Year Ago</span>
+           </div>
+
         </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
+        <div class="card-action" id="card-action" style="background-color : #e37949; height: 170px;">
+          <div class="row">
+            <a class="waves-effect waves-light btn" style="background-color : #e6997a; color : white; margin-top : 40px;"><i class="fa fa-twitter" style="color : white;"></i>&nbsp;&nbsp; Follow</a>
+            <a href=""  style="color : #DCDCDC; margin-left : 10px;  margin-top : 45px;"> &nbsp;&nbsp;&nbsp;&nbsp; Add to Bookmarks</a>
+          </div>
         </div>
         </div>
     </div>
